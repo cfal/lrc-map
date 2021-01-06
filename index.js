@@ -10,6 +10,18 @@ class LrcMap {
     this._data = {};
   }
 
+  get maxItems() {
+    return this._maxItems;
+  }
+
+  get size() {
+    return this._added.length;
+  }
+
+  isFull() {
+    return this._added.length >= this._maxItems;
+  }
+
   clear() {
     this._added = [];
     this._data = {};
